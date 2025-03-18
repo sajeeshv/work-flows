@@ -33,5 +33,3 @@ def weather_flow(city="London"):
     report = process_weather(weather_data)
     print(report)  # Print the final weather summary
 
-if __name__ == "__main__":
-    weather_flow("New York")
