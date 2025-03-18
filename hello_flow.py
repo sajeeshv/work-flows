@@ -23,6 +23,7 @@ def end(a : int):
 @flow(name="hello-flow")
 def hello_flow():
     result=say_hello()
+    print(f'RESULT -{result}')
     return result
     
     
