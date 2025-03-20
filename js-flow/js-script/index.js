@@ -1,7 +1,9 @@
 async function main() {
     console.log('Hello, world!');
+    return "Its working!!!!!!!!!";
 }
 (async () => {
-    await main();
+   res= await main();
+   return res;
 }
 )()

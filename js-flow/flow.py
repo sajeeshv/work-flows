@@ -3,7 +3,7 @@ import subprocess
 
 @task
 def run_js_script():
-    result = subprocess.run(["node", "run", "index.js"], capture_output=True, text=True)
+    result = subprocess.run(["node", "run", "js-script/index.js"], capture_output=True, text=True)
     return result.stdout
 
 @flow
