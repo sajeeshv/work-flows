@@ -21,7 +21,6 @@ async function main() {
 }
 async function getData() {
     try {
-        console.log('Getting data');
         const promise = new Promise((resolve, reject) => {
             recordsApi.listRecords("67af10ca15045c0335ca135c", "Meter", {
                 "select": ["id", "customerId", "serviceId", "meterNumber", "meterEntityId", "status"]
@@ -34,7 +33,7 @@ async function getData() {
             });
         });
         const meters = await promise;
-        return meters;
+        return meters
     } catch (error) {
         console.error('Error in getData function', error);
         return error;
@@ -42,13 +41,12 @@ async function getData() {
 }
 (async () => {
     try {
-        console.log('Starting the js script');
         res = await main();
         console.log(res);
-        return res;
+        // return res;
     } catch (error) {
         console.error('Error in async function', error);
-        return error;
+        // return error;
     }
 }
 )()

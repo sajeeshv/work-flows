@@ -13,7 +13,7 @@ def run_js_script():
         subprocess.run(["npm", "install"], cwd=js_dir, check=True)
 
         result = subprocess.run(["node", js_file], capture_output=True, text=True)
-        return result.stdout
+        return result.stdout.strip()
     else:
         print(f"{js_file}not exist")
         return "JS file not found"
