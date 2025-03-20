@@ -4,12 +4,12 @@ import subprocess
 
 @task
 def run_js_script():
-    print("JS script PATH",os.path.abspath("./js-flow/js-script/index.js"))
-    if os.path.exists(os.path.abspath("./js-flow/js-script/index.js")):
+    jsFilePath=os.path.abspath("./js-flow/js-script/index.js")
+    if os.path.exists(jsFilePath):
         print("File or directory exists")
     else:
         print("File or directory does not exist")
-    result = subprocess.run(["node", "run",os.path.abspath("./js-flow/js-script/index.js")], capture_output=True, text=True)
+    result = subprocess.run(["node",jsFilePath], capture_output=True, text=True)
     return result.stdout
 
 @flow
