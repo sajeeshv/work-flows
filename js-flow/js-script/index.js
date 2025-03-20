@@ -1,7 +1,13 @@
 const moment = require('moment');
 async function main() {
-    console.log('Hello, world!');
-    return `[${moment.utc().format("DD-MM-YYYY hh:mm:s A")}] Its working!!!!!!!!!`;
+    try {
+
+        console.log('Hello, world!');
+        return `[${moment.utc().format("DD-MM-YYYY hh:mm:s A")}] Its working!!!!!!!!!`;
+    } catch (error) {
+        console.error('Error in main function', error);
+        return error;
+    }
 }
 (async () => {
     res = await main();
