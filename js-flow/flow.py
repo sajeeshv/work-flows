@@ -25,5 +25,5 @@ def js_workflow():
     print(f"JS output: {output}")
 
 
-if __name__ == "__main__":
-    js_workflow()
+# if __name__ == "__main__":
+#     js_workflow()

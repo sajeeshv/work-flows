@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@thingspine/api-client": "^0.12.0",
     "moment": "^2.30.1"
   }
 }
