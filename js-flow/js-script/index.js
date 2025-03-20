@@ -11,7 +11,7 @@ const recordsApi = new RecordsApi(apiClient,); // instantiate the records api
 
 async function main() {
     try {
-        console.log('Hello, world!');
+        // console.log('Hello, world!');
         const data = await getData()
         return data;
     } catch (error) {
