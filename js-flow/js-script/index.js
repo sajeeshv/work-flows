@@ -1,9 +1,8 @@
-import moment from "moment/moment";
+// import moment from "moment/moment";
 async function main() {
     try {
-
         console.log('Hello, world!');
-        return `[${moment.utc().format("DD-MM-YYYY hh:mm:s A")}] Its working!!!!!!!!!`;
+        return `[${Date.UTC()}] Its working!!!!!!!!!`;
     } catch (error) {
         console.error('Error in main function', error);
         return error;
