@@ -11,7 +11,7 @@ def run_js_script():
         print(f"{js_file} exists")
         # Ensure dependencies are installed
         subprocess.run(["npm", "install"], cwd=js_dir, check=True)
-        
+
         result = subprocess.run(["node", js_file], capture_output=True, text=True)
         return result.stdout
     else:
