@@ -1,18 +1,17 @@
-from prefect import flow, task
+# from prefect import flow, task
 import os
 import subprocess
 
-@task
+# @task
 def run_js_script():
-    jsFilePath="js-flow/js-script/index.js"
-    if os.path.exists(jsFilePath):
-        print("File or directory exists")
+    if os.path.exists(os.path.abspath("js-flow/js-script/index.js")):
+        print(f"{os.path.abspath("js-flow/js-script/index.js")} exists")
     else:
-        print("File or directory does not exist")
-    result = subprocess.run(["node",jsFilePath], capture_output=True, text=True)
+        print(f"{os.path.abspath("js-flow/js-script/index.js")}not exist")
+    result = subprocess.run(["node", os.path.abspath("js-flow/js-script/index.js")], capture_output=True, text=True)
     return result.stdout
 
-@flow
+# @flow
 def js_workflow():
     output = run_js_script()
     print(f"JS output: {output}")
