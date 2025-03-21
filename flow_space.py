@@ -12,7 +12,7 @@ def start_flow():
 
 @task
 async def get_spaces():
-    url = "https://api.ts-system/api/spaces"
+    url = "http://api.ts-system/api/spaces"
     response = requests.get(url)
     data = response.json()
     return data
